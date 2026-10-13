@@ -32,7 +32,16 @@ pesan_penutup = [
     "I still love you, I still miss you, and I will always care about you.", 
     "aku kangen kamu, aku sayang kamu, dan aku masih cinta kamu.",
     "gimanapun keadaan kita sekarang, aku harap kamu melihat kebelakang dan melihat seberapa besar aku mencintamu bii",
-    "Apa pun jawabanmu, terima kasih sudah membaca pesan kecil ini sampai selesai, love you biibii."
+    "Apa pun jawabanmu, terima kasih sudah membaca pesan kecil ini sampai selesai, love you biibii.",
+    "maaf yaa aku selalu ganggu waktu kamu wkwkwkw, aku cuma pengen kamu tau aja perasaan aku sekarang.",
+    "tapii aku bener-bener mintaaa maaff yaaa, aku terkesan kaya spammm chat kamuuuu hehe",
+    "mungkinnn habis inii aku tak spam chat lagiiiii, paling aku cuman mau cerita-cerita dikit ajaaa",
+    "akuuu rangkum ceritanya darii pagi sampee malemm, aku jadiin satu teks ajaaa, kalo banyakkk takut kamu risih",
+    "maaafff yaa biii, aku gatau lagi mo ngungkapin gimanaaaaaa",
+    "masalah kamu mau balas pesanku atau tidak, itu urusan kamuu, aku cuman mau ceritaaa ajaa kokk",
+    "sekalipun aku di bisukan plus di arsipkan juga gapapa kokk biiiiii",
+    "i stilove youuuuuuuuuuuuuu biiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii",
+    "aku kangen kamuu"
 ]
 
 jawaban_benar = {
@@ -102,7 +111,7 @@ st.html(
             color: #765563;
             font-size: 1rem;
             line-height: 1.7;
-        ">Ada rasa yang kusimpan dalam teka-teki kecil ini.<br>
+        ">Ada yang kusimpan dalam teka-teki kecil ini.<br>
         Baca pelan-pelan aja yaa bii.</div>
         <div aria-hidden="true" style="
             margin-top: 1.2rem;
@@ -121,15 +130,15 @@ with st.container(border=True):
         " kalau masih belum paham, kamu bisa menyalin kalimatnya terus menempelkannya di situs web di bawah ini"
     )
     st.link_button(
-        "Buka alat bantu sandi Caesar",
-        "https://www.dcode.fr/caesar-cipher",
+        "Buka alat bantu sandi Caesar, terus pencet yang Decrypt yaa",
+        "https://caesarcipher.org/ciphers/caesar",
         icon=":material/open_in_new:",
     )
     st.caption("Tak apa kalau belum terpecahkan. Ada pesan yang menunggumu di akhir.")
 
 st.subheader("Beberapa kata untukmu", anchor=False, icon=":material/favorite:")
 with st.container(border=True):
-    st.caption("BACA PERLAHAN, LALU TEBAK APA YANG KURASAKAN")
+    st.caption("TEBAK INI APAA")
     for baris in petunjuk:
         st.markdown(encode_caesar(baris))
 
@@ -188,7 +197,7 @@ if st.session_state.umpan_balik:
 if st.session_state.selesai:
     st.subheader("Untukmu BiiBii", anchor=False, icon=":material/mail:")
     with st.container(border=True):
-        st.caption("BUKA SURAT KECIL INI DENGAN HATI")
+        st.caption("DECRYPT PESAN INI YAAACC UNTUK MELIHAT PESANNYA")
         for baris in pesan_penutup:
             st.markdown(encode_caesar(baris))
         st.markdown(
